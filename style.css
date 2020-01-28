@@ -430,6 +430,24 @@ ul {
     color:#fff;
 }
 
+uln64{
+    list-style-image: url('nintendo-64-logo-png-1.png');
+    color:#fff;
+}
+
+ulgc{
+    list-style-image: url('6983746_thumb.png');
+    color:#fff;
+}
+
+ulvlc{
+list-style-image: url('12-vlc_media_player-512.png');
+color:#fff;
+}
+ulsnes{
+list-style-image: url('6285752711268381672.png');
+color:#fff;
+}
 .pad{
     display:inline-block;
     margin-top:0px;
