@@ -1,0 +1,368 @@
+﻿<html>
+<!DOCTYPE html>
+<head>
+    <title>iLL-Logic Studios</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="scrollbarskins.css">
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+<link rel="icon" href="icolo.png" />
+<style>
+
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="line" id="grad">
+</div><!-- LINE -->
+<div class="header-trim">
+    <div class="header">
+    </div><!-- HEADER -->
+</div><!-- HEADER TRIM -->
+
+
+<div class="nav-trim">
+<div class="nav">
+    <div class="pad" id="txtshadow"><a id="ass" href="index.html">Home</div></a>
+    <div class="pad" id="txtshadow"><a id="ass" href="blogspot.html">Blog Spot</div></a>
+    <div class="pad" id="txtshadow"><a id="ass" href="scripts.html">Scripts</div></a>
+    <div class="pad" id="txtshadow"><a id="ass" href="homebrew.html">HomeBrew</div></a>
+    <div class="pad" id="txtshadow"><a id="ass" href="code.html">Code Snippets</div></a>
+    <div class="pad" id="txtshadow"><a id="ass" href="about.html">About</div></a>
+</div><!-- NAV -->
+</div><!-- NAV TRIM -->
+
+
+
+<div class="bubble">
+
+<div class="socialbox">
+    <h1 id="code">Code Snippets</h1>
+
+    <p id="p1">Welcome to my custom code snippets for web development. These are free to use.</p>
+
+<!--
+<ul>
+    <li>Homebrewed Applications</li>
+    <li>Glovepie Scripts</li>
+    <li>And more to come..</li>
+</ul>
+-->
+
+
+<div class="FAQ">
+    <h2 id="code20">Custom Skins for Scrollbars</h2>
+<p id="p40">With this custom scrollbar code, just add your own images for the UI and apply this style to a box element such as a DIV container
+or a table cell and more.</p>
+
+<textarea id="codeblock" readonly>
+/* Scrollbar Skins (vertical) */
+#scrollbox{
+overflow:scroll;
+background-color:#393939;
+color:#FF4500;
+min-height:200px;
+min-width:200px;
+max-height:200px;
+max-width:200px;
+white-space: nowrap;
+padding:0px;
+}
+
+    /* width */
+#scrollbox::-webkit-scrollbar {
+    width:25px;
+ }
+
+    /* Track */
+#scrollbox::-webkit-scrollbar-track:vertical {
+    border-left:2px solid #080808;
+    border-right:2px solid #080808;
+    background-image:url('spire.png'); 
+    border-radius: 0px;
+    background-color: #202020;
+    }
+
+    /* Handle */
+#scrollbox::-webkit-scrollbar-thumb:vertical {
+    background-color: #272727;
+    border:1px solid #080808;
+    border-radius: 0px;
+    background-image:url('ts.png'), url('bs.png'), url('msh.png');
+    background-repeat: no-repeat, no-repeat, repeat-y;
+    background-position:top, bottom, center;
+    }
+    
+    /* Buttons */
+#scrollbox::-webkit-scrollbar-button {
+    }
+    
+#scrollbox::-webkit-scrollbar-button:vertical:increment {
+    background-image: url('ddown.png');
+    width:25px;
+    height:25px;
+    border-left:1px solid #080808;
+    border-bottom:1px solid #080808;
+    border-right:1px solid #080808;
+}
+
+#scrollbox::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url('uup.png');
+    width:25px;
+    height:25px;
+    border-right:1px solid #080808;
+    border-bottom:1px solid #080808;
+    border-left:1px solid #080808;
+}
+
+
+
+
+/* Scrollbar Skins (horizontal) */
+
+    /* height */
+    #scrollbox::-webkit-scrollbar:horizontal {
+    height: 25px;
+ }
+
+    /* Track */
+    #scrollbox::-webkit-scrollbar-track:horizontal {
+    border-bottom:2px solid #080808;
+    border-top:2px solid #080808;
+    background-image:url('spire.png'); 
+    border-radius: 0px;
+    background-color: #202020;
+    }
+
+    /* Handle */
+    #scrollbox::-webkit-scrollbar-thumb:horizontal {
+    background-color: #272727;
+    border:1px solid #080808;
+    border-radius: 0px;
+    background-image:url('ls.png'), url('rs.png'), url('ms.png');
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position:left, right, center;
+    }
+    
+    /* Buttons */
+#scrollbox::-webkit-scrollbar-button {
+    }
+    
+#scrollbox::-webkit-scrollbar-button:horizontal:increment {
+    background-image: url('fforw.png');
+    width:25px;
+    height:25px;
+    border-top:1px solid #080808;
+    border-bottom:1px solid #080808;
+    border-right:1px solid #080808;
+}
+
+#scrollbox::-webkit-scrollbar-button:horizontal:decrement {
+   background-image: url('bback.png');
+    width:25px;
+    height:25px;
+    border-top:1px solid #080808;
+    border-bottom:1px solid #080808;
+    border-left:1px solid #080808;
+}
+
+</textarea>
+<div class="example">
+    <h4 id="p30">Demo</h4>
+    <textarea id="scrollbox">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Integer nec odio. Praesent libero. Sed cursus ante dapibus 
+    diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. 
+    Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed 
+    augue semper porta. Mauris massa. Vestibulum lacinia arcu 
+    eget nulla. Class aptent taciti sociosqu ad litora torquent
+    per conubia nostra, per inceptos himenaeos. Curabitur sodales
+    ligula in libero. Sed dignissim lacinia nunc. Curabitur
+    tortor. Pellentesque nibh. Aenean quam. In scelerisque sem
+    at dolor. Maecenas mattis. Sed convallis tristique sem. Proin
+    ut ligula vel nunc egestas porttitor. Morbi lectus risus, 
+    iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis
+    quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus,
+    ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque 
+    volutpat condimentum velit. Class aptent taciti sociosqu ad 
+    litora torquent per conubia nostra, per inceptos himenaeos. 
+    Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor 
+    neque adipiscing diam, a cursus ipsum ante quis turpis. 
+    Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc 
+    feugiat mi a tellus consequat imperdiet. Vestibulum sapien.
+    Proin quam. Etiam ultrices. Suspendisse in justo eu magna 
+    luctus suscipit. Sed lectus. Integer euismod lacus luctus 
+    magna. Quisque cursus, metus vitae pharetra auctor, sem 
+    massa mattis sem, at interdum magna augue eget diam.
+    Vestibulum ante ipsum primis in faucibus orci luctus 
+    et ultrices posuere cubilia Curae; Morbi lacinia molestie
+    dui. Praesent blandit dolor. Sed non quam. In vel mi sit
+    amet augue congue elementum. Morbi in ipsum sit amet pede 
+    facilisis laoreet. Donec lacus nunc, viverra nec, blandit 
+    vel, egestas et, augue. Vestibulum tincidunt malesuada 
+    tellus. Ut ultrices ultrices enim. Curabitur sit amet
+    mauris. Morbi in dui quis est pulvinar ullamcorper. 
+    </textarea>
+</div>
+
+</div><!-- FAQ -->
+
+<div class="FAQ">
+    <h2 id="code20">Another Code Here</h2>
+    <p id="p40">Blah Blah Blah!!!</p>
+<textarea id="codeblock" readonly>
+<code goes here>
+</textarea>
+</div><!-- FAQ -->
+
+
+
+</div><!-- SOCIAL BOX -->
+
+<div class="fb-comments" data-href="index.html" data-width="500px" data-numposts="10"></div>
+
+
+</div><!-- BUBBLE -->
+
+</div><!-- WRAPPER -->
+<div class="footer">
+    <div class="copy" id="txtshadow">iLL-Logic Studios &copy All Rights Reserved</div><!-- COPYRIGHT -->
+</div><!-- FOOTER -->
+
+<script>
+    var tabCharacter = "  ";
+var tabOffset = 2;
+
+$(document).on('click', '#indent', function(e){
+    e.preventDefault();
+    var self = $(this);
+    
+    self.toggleClass('active');
+    
+    if(self.hasClass('active'))
+    {
+        tabCharacter = "\t";
+        tabOffset = 1;
+    }
+    else
+    {
+        tabCharacter = "  ";
+        tabOffset = 2;
+    }
+})
+
+$(document).on('click', '#fullscreen', function(e){
+    e.preventDefault();
+    var self = $(this);
+    
+    self.toggleClass('active');
+    self.parents('.editor-holder').toggleClass('fullscreen');
+});
+
+/*------------------------------------------
+    Render existing code
+------------------------------------------*/
+$(document).on('ready', function(){
+    hightlightSyntax();
+    
+    emmet.require('textarea').setup({
+    pretty_break: true,
+    use_tab: true
+    });
+});
+
+
+
+
+/*------------------------------------------
+    Capture text updates
+------------------------------------------*/
+$(document).on('ready load keyup keydown change', '.editor', function(){
+    correctTextareaHight(this);
+    hightlightSyntax();
+});
+
+
+/*------------------------------------------
+    Resize textarea based on content  
+------------------------------------------*/
+function correctTextareaHight(element)
+{
+  var self = $(element),
+      outerHeight = self.outerHeight(),
+      innerHeight = self.prop('scrollHeight'),
+      borderTop = parseFloat(self.css("borderTopWidth")),
+      borderBottom = parseFloat(self.css("borderBottomWidth")),
+      combinedScrollHeight = innerHeight + borderTop + borderBottom;
+  
+  if(outerHeight < combinedScrollHeight )
+  {
+    self.height(combinedScrollHeight);
+  }
+}
+// function correctTextareaHight(element){
+//  while($(element).outerHeight() < element.scrollHeight + parseFloat($(element).css("borderTopWidth")) + parseFloat($(element).css("borderBottomWidth"))) {
+//      $(element).height($(element).height()+1);
+//  };
+// }
+
+
+/*------------------------------------------
+    Run syntax hightlighter  
+------------------------------------------*/
+function hightlightSyntax(){
+    var me  = $('.editor');
+    var content = me.val();
+    var codeHolder = $('code');
+    var escaped = escapeHtml(content);
+    
+    codeHolder.html(escaped);
+    
+    $('.syntax-highight').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+}
+
+
+/*------------------------------------------
+    String html characters
+------------------------------------------*/
+function escapeHtml(unsafe) {
+    return unsafe
+             .replace(/&/g, "&amp;")
+             .replace(/</g, "&lt;")
+             .replace(/>/g, "&gt;")
+             .replace(/"/g, "&quot;")
+             .replace(/'/g, "&#039;");
+}
+
+
+/*------------------------------------------
+    Enable tabs in textarea
+------------------------------------------*/
+$(document).delegate('.allow-tabs', 'keydown', function(e) {
+    var keyCode = e.keyCode || e.which;
+
+    if (keyCode == 9) {
+        e.preventDefault();
+        var start = $(this).get(0).selectionStart;
+        var end = $(this).get(0).selectionEnd;
+
+        // set textarea value to: text before caret + tab + text after caret
+        $(this).val($(this).val().substring(0, start)
+                                + tabCharacter
+                                + $(this).val().substring(end));
+
+        // put caret at right position again
+        $(this).get(0).selectionStart =
+        $(this).get(0).selectionEnd = start + tabOffset;
+    }
+});
+
+</script>
+
+</body>
+</html>

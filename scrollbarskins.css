@@ -1,0 +1,119 @@
+﻿/* Scrollbar Skins (vertical) */
+#scrollbox{
+overflow: scroll;
+background-color:#393939;
+color:#FF4500;
+min-height:200px;
+min-width:200px;
+max-height:250px;
+max-width:250px;
+white-space: nowrap;
+padding:0px;
+}
+
+#scrollbox::-webkit-scrollbar-corner{
+background-image:url('resizer.png');
+
+}
+       
+#scrollbox::-webkit-resizer  {
+border:1px solid #000;
+box-shadow: inset 1px 1px 5px -1px #000;
+}
+
+    /* width */
+#scrollbox::-webkit-scrollbar {
+    width:25px;
+ }
+
+    /* Track */
+#scrollbox::-webkit-scrollbar-track:vertical {
+    border-left:2px solid #080808;
+    border-right:2px solid #080808;
+    background-image:url('spire.png'); 
+    border-radius: 0px;
+    background-color: #202020;
+    }
+
+    /* Handle */
+#scrollbox::-webkit-scrollbar-thumb:vertical {
+    background-color: #272727;
+    border:1px solid #080808;
+    border-radius: 0px;
+    background-image:url('ts.png'), url('bs.png'), url('msh.png');
+    background-repeat: no-repeat, no-repeat, repeat-y;
+    background-position:top, bottom, center;
+    }
+    
+    /* Buttons */
+#scrollbox::-webkit-scrollbar-button {
+    }
+    
+#scrollbox::-webkit-scrollbar-button:vertical:increment {
+    background-image: url('ddown.png');
+    width:25px;
+    height:25px;
+    border-left:1px solid #080808;
+    border-bottom:1px solid #080808;
+    border-right:1px solid #080808;
+}
+
+#scrollbox::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url('uup.png');
+    width:25px;
+    height:25px;
+    border-right:1px solid #080808;
+    border-bottom:1px solid #080808;
+    border-left:1px solid #080808;
+}
+
+
+
+
+/* Scrollbar Skins (horizontal) */
+
+    /* height */
+    #scrollbox::-webkit-scrollbar:horizontal {
+    height: 25px;
+ }
+
+    /* Track */
+    #scrollbox::-webkit-scrollbar-track:horizontal {
+    border-bottom:2px solid #080808;
+    border-top:2px solid #080808;
+    background-image:url('spire.png'); 
+    border-radius: 0px;
+    background-color: #202020;
+    }
+
+    /* Handle */
+    #scrollbox::-webkit-scrollbar-thumb:horizontal {
+    background-color: #272727;
+    border:1px solid #080808;
+    border-radius: 0px;
+    background-image:url('ls.png'), url('rs.png'), url('ms.png');
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position:left, right, center;
+    }
+    
+    /* Buttons */
+#scrollbox::-webkit-scrollbar-button {
+    }
+    
+#scrollbox::-webkit-scrollbar-button:horizontal:increment {
+    background-image: url('fforw.png');
+    width:25px;
+    height:25px;
+    border-top:1px solid #080808;
+    border-bottom:1px solid #080808;
+    border-right:1px solid #080808;
+}
+
+#scrollbox::-webkit-scrollbar-button:horizontal:decrement {
+   background-image: url('bback.png');
+    width:25px;
+    height:25px;
+    border-top:1px solid #080808;
+    border-bottom:1px solid #080808;
+    border-left:1px solid #080808;
+}
