@@ -448,6 +448,13 @@ ulsnes{
 list-style-image: url('6285752711268381672.png');
 color:#fff;
 }
+
+ulsmbx{
+list-style-image: url('100px-SMB3_Mushroom.png');
+color:#fff;
+}
+
+
 .pad{
     display:inline-block;
     margin-top:0px;
