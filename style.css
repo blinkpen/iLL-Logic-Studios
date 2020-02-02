@@ -403,8 +403,9 @@ overflow:hidden;
 blockquote{
     border:1px solid #000;
     padding:10px;
+    position:absolute;
     max-width:600px;
-    height:200px;
+    height:;
     min-width:400px;
     color:white;
     background-color:#272822;
