@@ -400,10 +400,28 @@ overflow:hidden;
     padding-top:10px;
 }
 
+blockquote2{
+    border:1px solid #000;
+    padding:10px;
+    display:block;
+    max-width:600px;
+    height:200px;
+    min-width:400px;
+    color:white;
+    background-color:#272822;
+    box-shadow: 2px 2px 10px #000;
+    border-radius:3px;
+     -webkit-border-image: -webkit-linear-gradient(left, red 5%, yellow 40%, blue 50%); /* For Safari 5.1 to 6.0 */
+
+-moz-border-image: -moz-linear-gradient(left, red 5%, yellow 40%, blue 50%); /* For Firefox 3.6 to 15 */
+ border-image-slice: 1;
+}
+
+
 blockquote{
     border:1px solid #000;
     padding:10px;
-    position:absolute;
+    display:block;
     max-width:600px;
     height:;
     min-width:400px;
@@ -416,6 +434,8 @@ blockquote{
 -moz-border-image: -moz-linear-gradient(left, red 5%, yellow 40%, blue 50%); /* For Firefox 3.6 to 15 */
  border-image-slice: 1;
 }
+
+
 
 #angle{
         box-shadow: 2px 2px 5px #000;
