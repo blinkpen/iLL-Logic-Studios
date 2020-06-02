@@ -198,12 +198,13 @@ overflow:;
     z-index:1;
     margin:0 auto;
     white-space: nowrap;
+    
 }
 
 .nav{
     background-color:#343434;
     height:50px;
-    position:absolute;
+    position:;
     top:0;
     left:0;
     right:0;
@@ -211,7 +212,7 @@ overflow:;
     width:50%;
     z-index:1;
     white-space: nowrap;
-   
+ 
 }
 
 .bubble{
