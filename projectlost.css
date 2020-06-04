@@ -105,11 +105,12 @@ height:360px;
 
 .videobox
 {
-overflow:visible;
+overflow:hidden;
 border:2px solid #000;
 box-shadow:0px 2px 5px #000;
 width:560px;
 height:315px;
+border-radius:20px;
 }
 
 .videocard
