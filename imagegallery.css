@@ -21,6 +21,8 @@ div.gallery img {
 
 div.desc {
   padding: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   text-align: center;
   color:#fff;
   background-image: url('lg bg3.png');
