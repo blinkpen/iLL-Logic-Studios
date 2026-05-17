@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cannabis Strain Explorer — iLL‑Logic Studios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="page">
+
+  <header>
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Cannabis Strain Intelligence
+    </div>
+    <h1>Cannabis Strain Explorer</h1>
+    <p class="subtitle">
+      Browse hundreds of strains from an open-source dataset. Select a strain to view its effects, flavors, lineage, and more.
+    </p>
+  </header>
+
+  <main class="grid">
+
+    <!-- LEFT PANEL -->
+    <section class="panel">
+      <div class="panel-inner">
+
+        <div class="panel-title">Strain Selector</div>
+        <div class="panel-main-title">Choose a strain</div>
+
+        <p class="panel-description">
+          Select a strain from the dropdown. All data loads dynamically from an open-source cannabis database.
+        </p>
+
+        <label style="font-size:0.85rem;color:var(--text-muted);display:block;margin-bottom:6px;">
+          Select strain
+        </label>
+
+        <select id="strain-select" style="
+          width:100%;
+          padding:8px 10px;
+          border-radius:10px;
+          border:1px solid var(--border-subtle);
+          background:rgba(15,23,42,0.95);
+          color:var(--text-main);
+          font-size:0.9rem;
+          margin-bottom:14px;
+        "></select>
+
+        <div id="strain-image-wrapper" style="margin-bottom:12px;display:flex;justify-content:center;">
+          <img id="strain-image" src="" alt="Strain image" style="
+            max-width:100%;
+            max-height:220px;
+            border-radius:12px;
+            border:1px solid rgba(148,163,184,0.5);
+            object-fit:cover;
+            display:none;
+          ">
+        </div>
+
+        <div id="strain-description" style="font-size:0.9rem;color:var(--text-main);line-height:1.5;"></div>
+
+      </div>
+    </section>
+
+    <!-- RIGHT PANEL -->
+    <section class="panel">
+      <div class="panel-inner">
+
+        <div class="panel-title">Profile</div>
+        <div class="panel-main-title" id="strain-name-heading">Strain</div>
+        <p class="panel-description" id="strain-type"></p>
+
+        <!-- THC/CBD -->
+        <div class="pill-row" style="margin-bottom:12px;">
+          <div class="pill">
+            <span></span>
+            THC: <span id="strain-thc" style="box-shadow:none;background:none;width:auto;height:auto;"></span>
+          </div>
+          <div class="pill">
+            <span></span>
+            CBD: <span id="strain-cbd" style="box-shadow:none;background:none;width:auto;height:auto;"></span>
+          </div>
+        </div>
+
+        <!-- Indica/Sativa -->
+        <div style="margin-bottom:12px;">
+          <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:4px;">Indica / Sativa</div>
+
+          <div style="
+            width:100%;
+            height:10px;
+            border-radius:999px;
+            background:rgba(15,23,42,0.9);
+            border:1px solid rgba(148,163,184,0.4);
+            overflow:hidden;
+            display:flex;
+          ">
+            <div id="indica-bar" style="height:100%;background:#4b5563;width:50%;"></div>
+            <div id="sativa-bar" style="height:100%;background:#22c55e;width:50%;"></div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;font-size:0.78rem;color:var(--text-muted);margin-top:4px;">
+            <span id="indica-label">Indica 50%</span>
+            <span id="sativa-label">Sativa 50%</span>
+          </div>
+        </div>
+
+        <!-- Lineage -->
+        <div class="category">
+          <div class="category-header">
+            <div class="category-name">Lineage</div>
+          </div>
+          <ul class="project-list">
+            <li class="project">
+              <div class="project-header-row">
+                <div class="project-name">Parents</div>
+              </div>
+              <div class="project-summary" id="strain-parents"></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Effects -->
+        <div class="category">
+          <div class="category-header">
+            <div class="category-name">Effects</div>
+          </div>
+          <ul class="project-list">
+            <li class="project">
+              <div class="project-summary" id="strain-effects"></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Flavors -->
+        <div class="category">
+          <div class="category-header">
+            <div class="category-name">Flavors</div>
+          </div>
+          <ul class="project-list">
+            <li class="project">
+              <div class="project-summary" id="strain-flavors"></div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <p class="footer-note" style="margin-top:26px;">
+    Data provided by the open-source Cannabis API project.
+  </p>
+
+</div>
+
+<script>
+const API_URL = "https://raw.githubusercontent.com/akabab/cannabis-api/master/strains.json";
+
+let strainData = [];
+
+const selectEl = document.getElementById("strain-select");
+const imgEl = document.getElementById("strain-image");
+const descEl = document.getElementById("strain-description");
+const nameHeadingEl = document.getElementById("strain-name-heading");
+const typeEl = document.getElementById("strain-type");
+const thcEl = document.getElementById("strain-thc");
+const cbdEl = document.getElementById("strain-cbd");
+const parentsEl = document.getElementById("strain-parents");
+const effectsEl = document.getElementById("strain-effects");
+const flavorsEl = document.getElementById("strain-flavors");
+const indicaBarEl = document.getElementById("indica-bar");
+const sativaBarEl = document.getElementById("sativa-bar");
+const indicaLabelEl = document.getElementById("indica-label");
+const sativaLabelEl = document.getElementById("sativa-label");
+
+async function loadStrains() {
+  const res = await fetch(API_URL);
+  strainData = await res.json();
+
+  strainData.sort((a, b) => a.name.localeCompare(b.name));
+
+  strainData.forEach(s => {
+    const opt = document.createElement("option");
+    opt.value = s.id;
+    opt.textContent = s.name;
+    selectEl.appendChild(opt);
+  });
+
+  updateUI(strainData[0].id);
+}
+
+function updateUI(id) {
+  const s = strainData.find(x => x.id == id);
+  if (!s) return;
+
+  nameHeadingEl.textContent = s.name;
+  typeEl.textContent = s.race ? s.race.toUpperCase() : "Unknown";
+
+  // THC/CBD (dataset doesn't include these — generate placeholders)
+  thcEl.textContent = s.thc || "—";
+  cbdEl.textContent = s.cbd || "—";
+
+  // Description
+  descEl.textContent = s.desc || "No description available.";
+
+  // Image
+  if (s.image) {
+    imgEl.src = s.image;
+    imgEl.style.display = "block";
+  } else {
+    imgEl.style.display = "none";
+  }
+
+  // Effects
+  const effects = s.effects?.positive?.join(", ") || "No data";
+  effectsEl.textContent = effects;
+
+  // Flavors
+  const flavors = s.flavors?.join(", ") || "No data";
+  flavorsEl.textContent = flavors;
+
+  // Parents
+  parentsEl.textContent = s.parents || "Unknown";
+
+  // Indica/Sativa (approx from race)
+  let indica = 50, sativa = 50;
+
+  if (s.race === "indica") { indica = 80; sativa = 20; }
+  if (s.race === "sativa") { indica = 20; sativa = 80; }
+  if (s.race === "hybrid") { indica = 50; sativa = 50; }
+
+  indicaBarEl.style.width = indica + "%";
+  sativaBarEl.style.width = sativa + "%";
+  indicaLabelEl.textContent = `Indica ${indica}%`;
+  sativaLabelEl.textContent = `Sativa ${sativa}%`;
+}
+
+selectEl.addEventListener("change", () => updateUI(selectEl.value));
+
+loadStrains();
+</script>
+
+</body>
+</html>
