@@ -1,115 +1,131 @@
-﻿<html>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>iLL-Logic Studios</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script type="text/javascript" src="contentselector.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="devclasskit/devclasskit.css">
-<link rel="icon" href="icolo.png" />
-<style>
+    <meta charset="UTF-8">
+    <title>iLL-Logic Studios — HomeBrewed Applications</title>
 
-</style>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap" rel="stylesheet">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="icon" href="icolo.png" />
 </head>
 
 <body>
 
 <div class="wrapper">
 
-<div class="line" id="grad">
-</div><!-- LINE -->
-<div class="header-trim">
-    <div class="header">
-    </div><!-- HEADER -->
-</div><!-- HEADER TRIM -->
+    <!-- RAINBOW BAR -->
+    <div class="line" id="grad"></div>
 
+    <!-- HEADER -->
+    <div class="header-trim">
+        <div class="header"></div>
+    </div>
 
-<div class="nav-trim">
-<div class="nav">
-    <div class="pad" id="txtshadow"><a id="ass" href="index.html">Home</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="blogspot.html">Blog Spot</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="scripts.html">Scripts</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="homebrew.html">HomeBrew</div></a>
-       <div class="pad" id="txtshadow"><a id="ass" href="projectlost.html">Project Lost</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="code.html">Code Snippets</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="about.html">About</div></a>
-</div><!-- NAV -->
-</div><!-- NAV TRIM -->
+    <!-- NAVIGATION -->
+    <div class="nav-trim">
+        <div class="nav">
+            <a class="pad" href="index.html">Home</a>
+            <a class="pad" href="scripts.html">Scripts</a>
+            <a class="pad" href="homebrew.html">HomeBrew</a>
+            <a class="pad" href="about.html">About</a>
+        </div>
+    </div>
 
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-    
-<div class="bubble">
+    <!-- CONTENT AREA -->
+    <div class="bubble">
+        <div class="socialbox">
 
-<div class="socialbox">
-<h1 id="apps">HomeBrewed Applications</h1>
+            <h1 id="apps">HomeBrewed Applications</h1>
 
-<p id="p1">Below is a list of my homebrewed applications:</p>
-<div class="appslist">
-    
-<div class="FAQ">
-<ul>
-<li>DisBot: A Discord Bot God Mode type of application. Complete with bot commands and allows for banning/unbanning of bot commands to users with an assigned role. And much more. Coming soon.</li>
-<li><a href="https://github.com/blinkpen/Gifasso">Gifasso</a>: Convert animated GIFs into Animated ASCii Art GIFs.</li>
-<li><a href="https://github.com/blinkpen/ColorPen">ColorPen</a>: Grab the color of any pixel on your screen.</li>
-<li><a href="https://github.com/blinkpen/Musica">Musica Pro</a>: Random Melody Generator. Import a note sound. All notes will be genrated of that sound. Then you can generate a random melody with as many notes and at any tempo you want. New custom control allows for easy access.</li>
-<li><a href="https://github.com/blinkpen/blankhider">BlankHider</a>: Hide anything on your screen. Now with Desktop Camo Mode.</li>
-<li>Kryptonium</li>
-<li><a href="apps\ArcHider Pro.rar">ArcHider Pro</a>: Hide zip files inside an image.</li>
-<li><a href="apps\Ruby DIV Creator.rar">Ruby DIV Creator (RDC)</a>: Create CSS <wordblock>Div Containers</wordblock> easily using GUI interface.</li>
-<li>Tileionaire</li>
-<li><a href="apps\Musica.rar">Musica</a>: Randomly generate musical melodies.</li>
-<li><a href="apps\Tasty Batter Pro.rar">Tasty Batter Pro</a>: The assistive, stylish, technical yonderware that helps you write <wordblock>.bat</wordblock> files.</li>
-<li><a href="apps\LightBoard Genie.rar">Light Board Genie</a>: Create Portal 2 Test Chamber Signs (lightboards) using a GUI interface and generate code or export as a <wordblock>.png</wordblock> image.</li>
-<li><a href="apps\Kuribo Blue.rar">Kuribo Blue</a>: An NPC editor for Super Mario Bros. X</li>
-<li>Kuribo Red</li>
-<li>Screen Filter</li>
-<li>HTML Email Code Generator</li>
-<li><a href="apps\Fixel.rar">Fixel</a>: Fixes dead pixels. Basically flashes different colors on your screen. Not actually proven to work.</li>
-<li>Webcam Genie</li>
-<li>SpyWatcher</li>
-<li>Login Assistant</li>
-<li>Code Snippet Converter</li>
-<li>WebCraft</li>
-<li><a href="apps\Batch Animator.rar">BAAM (Batch Ascii Animation Manager)</a>: Create <wordblock>.bat</wordblock> files that animate ASCII art.</li>
-<li>Shell Packer</li>
-<li>PortaTube</li>
-<li>Color Finder Pro</li>
-<li><a href="apps\magical cussword generator BETA.rar">Magical Cussword Generator</a>: Randomly generates cusswords.</li>
-</ul>
+            <p>Below is a list of my homebrewed applications:</p>
 
-<p>More to come!</p>
-</div><!-- APPSLIST -->
+            <div class="FAQ">
+                <ul>
+                    <li>DisBot: A Discord Bot God Mode type of application. Complete with bot commands and allows for banning/unbanning of bot commands to users with an assigned role. And much more. Coming soon.</li>
 
-<p id="p1">Below is a list of my VS Custom Controls:</p>
-<div class="appslist">
-    
-<div class="FAQ">
-<ul>
-<li><a href="https://github.com/shitassm/TextBox-with-Placeholder-Control" target="_blank">TextBox with Placeholder</li></a>
-<li><a href="https://github.com/shitassm/AutoSaving-TextBox-Control" target="_blank">Auto-Saving Textbox</li></a>
-</ul>
+                    <li><a href="https://github.com/blinkpen/Gifasso">Gifasso</a>: Convert animated GIFs into Animated ASCII Art GIFs.</li>
 
-</div><!-- APPSLIST -->
+                    <li><a href="https://github.com/blinkpen/ColorPen">ColorPen</a>: Grab the color of any pixel on your screen.</li>
 
-</div><!-- FAQ -->
+                    <li><a href="https://github.com/blinkpen/Musica">Musica Pro</a>: Random Melody Generator. Import a note sound. All notes will be generated from that sound. Then you can generate a random melody with as many notes and at any tempo you want.</li>
 
+                    <li><a href="https://github.com/blinkpen/blankhider">BlankHider</a>: Hide anything on your screen. Now with Desktop Camo Mode.</li>
 
-</div><!-- SOCIAL BOX -->
+                    <li>Kryptonium</li>
 
+                    <li><a href="apps/ArcHider Pro.rar">ArcHider Pro</a>: Hide zip files inside an image.</li>
 
+                    <li><a href="apps/Ruby DIV Creator.rar">Ruby DIV Creator (RDC)</a>: Create CSS <wordblock>Div Containers</wordblock> easily using a GUI interface.</li>
 
+                    <li>Tileionaire</li>
 
-</div><!-- BUBBLE -->
+                    <li><a href="apps/Musica.rar">Musica</a>: Randomly generate musical melodies.</li>
 
-</div><!-- WRAPPER -->
+                    <li><a href="apps/Tasty Batter Pro.rar">Tasty Batter Pro</a>: Helps you write <wordblock>.bat</wordblock> files with style.</li>
 
+                    <li><a href="apps/LightBoard Genie.rar">Light Board Genie</a>: Create Portal 2 Test Chamber Signs (lightboards) using a GUI interface and export as <wordblock>.png</wordblock>.</li>
 
+                    <li><a href="apps/Kuribo Blue.rar">Kuribo Blue</a>: An NPC editor for Super Mario Bros. X.</li>
+
+                    <li>Kuribo Red</li>
+                    <li>Screen Filter</li>
+                    <li>HTML Email Code Generator</li>
+
+                    <li><a href="apps/Fixel.rar">Fixel</a>: Flashes colors to attempt fixing dead pixels.</li>
+
+                    <li>Webcam Genie</li>
+                    <li>SpyWatcher</li>
+                    <li>Login Assistant</li>
+                    <li>Code Snippet Converter</li>
+                    <li>WebCraft</li>
+
+                    <li><a href="apps/Batch Animator.rar">BAAM (Batch ASCII Animation Manager)</a>: Create <wordblock>.bat</wordblock> files that animate ASCII art.</li>
+
+                    <li>Shell Packer</li>
+                    <li>PortaTube</li>
+                    <li>Color Finder Pro</li>
+
+                    <li><a href="apps/magical cussword generator BETA.rar">Magical Cussword Generator</a>: Randomly generates cusswords.</li>
+                </ul>
+
+                <p>More to come!</p>
+            </div>
+
+            <p>Below is a list of my VS Custom Controls:</p>
+
+            <div class="FAQ">
+                <ul>
+                    <li><a href="https://github.com/shitassm/TextBox-with-Placeholder-Control" target="_blank">TextBox with Placeholder</a></li>
+                    <li><a href="https://github.com/shitassm/AutoSaving-TextBox-Control" target="_blank">Auto-Saving Textbox</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
 <div class="footer">
-    <div class="copy" id="txtshadow">iLL-Logic Studios &copy All Rights Reserved</div><!-- COPYRIGHT -->
-</div><!-- FOOTER -->
+    <div class="copy">iLL-Logic Studios &copy; All Rights Reserved</div>
+</div>
 
-
+<!-- MOBILE MENU SCRIPT -->
+<script>
+function toggleMenu() {
+    const nav = document.querySelector('.nav');
+    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+}
+</script>
 
 </body>
 </html>

@@ -1,65 +1,84 @@
-﻿<html>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>iLL-Logic Studios</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
-    <link rel="icon" href="icolo.png" />
-<style>
+    <meta charset="UTF-8">
+    <title>iLL-Logic Studios — About Us</title>
 
-</style>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap" rel="stylesheet">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="icon" href="icolo.png" />
 </head>
 
 <body>
 
-    <div class="wrapper">
+<div class="wrapper">
 
-<div class="line" id="grad">
-</div><!-- LINE -->
-<div class="header-trim">
-    <div class="header">
-    </div><!-- HEADER -->
-</div><!-- HEADER TRIM -->
+    <!-- RAINBOW BAR -->
+    <div class="line" id="grad"></div>
 
+    <!-- HEADER -->
+    <div class="header-trim">
+        <div class="header"></div>
+    </div>
 
-<div class="nav-trim">
-<div class="nav">
-    <div class="pad" id="txtshadow"><a id="ass" href="index.html">Home</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="blogspot.html">Blog Spot</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="scripts.html">Scripts</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="homebrew.html">HomeBrew</div></a>
-       <div class="pad" id="txtshadow"><a id="ass" href="projectlost.html">Project Lost</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="code.html">Code Snippets</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="about.html">About</div></a>
-</div><!-- NAV -->
-</div><!-- NAV TRIM -->
+    <!-- NAVIGATION -->
+    <div class="nav-trim">
+        <div class="nav">
+            <a class="pad" href="index.html">Home</a>
+            <a class="pad" href="scripts.html">Scripts</a>
+            <a class="pad" href="homebrew.html">HomeBrew</a>
+            <a class="pad" href="about.html">About</a>
+        </div>
+    </div>
 
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-    
-<div class="bubble">
+    <!-- CONTENT AREA -->
+    <div class="bubble">
+        <div class="socialbox">
 
-<div class="socialbox">
-    <h1 id="crown">About Us</h1>
+            <h1 id="crown">About Us</h1>
 
-<div class="BOXY">
-    <p id="psmall">iLL-Logic Studios is a software development company that is aimed in designing and building unique platforms. iLL-Logic Studios was founded by BuddyRoach in 2010, formally known as WizTech. It first began as a small humble computer repair business and since then has vastly grown in to the software development company that it is today.</p>
-    <blockquote2 align="left"><img id="angle" align="right" src="images\me.png"><i>Whenever I have an idea for something which is needed in my life, I build it to assist me in my every day tasks.<footer>-BuddyRoach, founder of iLL-Logic Studios</footer></i></blockquote2>
-</div><!-- BOXY -->
+            <div class="BOXY">
+                <p id="psmall">
+                    iLL-Logic Studios is a software development company that is aimed in designing and building unique platforms.
+                    iLL-Logic Studios was founded by BuddyRoach in 2010, formally known as WizTech.
+                    It first began as a small humble computer repair business and since then has vastly grown into the software development company that it is today.
+                </p>
 
-</div><!-- SOCIAL BOX -->
+                <blockquote2 align="left">
+                    <img id="angle" align="right" src="images/me.png">
+                    <i>
+                        Whenever I have an idea for something which is needed in my life, I build it to assist me in my every day tasks.
+                        <footer>-BuddyRoach, founder of iLL-Logic Studios</footer>
+                    </i>
+                </blockquote2>
+            </div>
 
+        </div>
+    </div>
 
+</div>
 
-
-</div><!-- BUBBLE -->
-
-</div><!-- WRAPPER -->
+<!-- FOOTER -->
 <div class="footer">
-    <div class="copy" id="txtshadow">iLL-Logic Studios &copy All Rights Reserved</div><!-- COPYRIGHT -->
-</div><!-- FOOTER -->
+    <div class="copy">iLL-Logic Studios &copy All Rights Reserved</div>
+</div>
 
-
+<!-- MOBILE MENU SCRIPT -->
+<script>
+function toggleMenu() {
+    const nav = document.querySelector('.nav');
+    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+}
+</script>
 
 </body>
 </html>

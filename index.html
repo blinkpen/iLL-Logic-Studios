@@ -1,92 +1,130 @@
-﻿
-<html>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>iLL-Logic Studios</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
-<link rel="icon" href="icolo.png" />
-<style>
 
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap" rel="stylesheet">
 
-</style>
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="icon" href="icolo.png" />
 </head>
 
 <body>
 
 <div class="wrapper">
 
-<div class="line" id="grad">
-</div><!-- LINE -->
-<div class="header-trim">
-    <div class="header">
-    </div><!-- HEADER -->
-</div><!-- HEADER TRIM -->
+    <!-- RAINBOW BAR -->
+    <div class="line" id="grad"></div>
 
-
-<div class="nav-trim">
-<div class="nav">
-    <div class="pad" id="txtshadow"><a id="ass" href="index.html">Home</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="blogspot.html">Blog Spot</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="scripts.html">Scripts</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="homebrew.html">HomeBrew</div></a>
-       <div class="pad" id="txtshadow"><a id="ass" href="projectlost.html">Project Lost</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="code.html">Code Snippets</div></a>
-    <div class="pad" id="txtshadow"><a id="ass" href="about.html">About</div></a>
-</div><!-- NAV -->
-</div><!-- NAV TRIM -->
-
-
-
-<div class="bubble">
-
-<div class="socialbox">
-    <h1 id="earth">Well, Hello World!</h1>
-
-    <p id="p1">Hello and welcome to iLL-Logic Studios. 
-This website is basically a depot of all of my desktop applications and Glovepie scripts. There is also a section with my rants and even some code snippets if you're interested. Enjoy!
- Please leave a comment below, as your feedback is always appreciated. Thanks!</p>
- 
-<!--
-<ul>
-    <li>Homebrewed Applications</li>
-    <li>Glovepie Scripts</li>
-    <li>And more to come..</li>
-</ul>
--->
-
-<div class="FAQ">
-    <h1>FAQ</h1>
-
-<h2 id="questred">Why use your apps?</h2>
-<p id="p40">Well, that's the beauty of free will, my friends! You don't have to! But you are welcome to use them if you want!</p>
-
-<h2 id="questred">Will your apps give my computer a virus?</h2>
-<p id="p40">No. I do not write malicious software. I am not a hacker. Just a programmer and web developer. But it's up to you to believe me or not.</p>
-
-<h2 id="questred">What are Glovepie scripts?</h2>
-<p id="p40">Glovepie scripts are scripts for Glovepie, a program that allows you to connect bluetooth devices such as the Nintendo Wii remote to your computer and use it to emulate keyboard and mouse functions in order to make certain operations easier such as playing emulators on your PC with the Wii remote rather than using your keyboard. I have written many scripts which do that and more. Check them out while you're here.</p>
-
-</div><!-- FAQ -->
-
-<div class="FAQ">
-    <h1>Also checkout</h1>
-    <ul>
-    <li><a href="https://www.youtube.com/channel/UC_uGAWT4LE_GNpow43Fa2OA?view_as=subscriber" target="_blank">My Youtube</a></li>
-    <li><a href="https://www.youtube.com/channel/UCMSN3VaTiX7zVuGbfg9q47w" target="_blank">Wizards Magic 007's Youtube</a></li>
-    </ul>
+    <!-- HEADER -->
+    <div class="header-trim">
+        <div class="header"></div>
     </div>
 
-</div><!-- SOCIAL BOX -->
+    <!-- NAVIGATION -->
+    <div class="nav-trim">
+        <div class="nav">
+            <a class="pad" href="index.html">Home</a>
+            <a class="pad" href="scripts.html">Scripts</a>
+            <a class="pad" href="homebrew.html">HomeBrew</a>
+            <a class="pad" href="about.html">About</a>
+        </div>
+    </div>
 
-</div><!-- BUBBLE -->
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-</div><!-- WRAPPER -->
+    <!-- CONTENT AREA -->
+    <div class="bubble">
+        <div class="socialbox">
+
+            <!-- HERO -->
+            <h1 id="earth">Welcome to iLL‑Logic Studios</h1>
+            <p class="intro">
+                We’re an independent studio focused on building unique digital experiences —  
+                from experimental prototypes to full‑scale creative projects.  
+                Whether it’s a game, a tool, or something unexpected,  
+                we build with curiosity, precision, and a bit of chaos.
+            </p>
+
+            <!-- WHAT WE DO -->
+            <div class="section">
+                <h2>What We Do</h2>
+                <p>
+                    iLL‑Logic Studios specializes in:
+                </p>
+
+                <ul>
+                    <li>Game development and interactive concepts</li>
+                    <li>Custom tools, utilities, and workflow enhancers</li>
+                    <li>Creative experiments and tech prototypes</li>
+                </ul>
+            </div>
+
+            <!-- CURRENT PROJECTS -->
+            <div class="section">
+                <h2>In Development</h2>
+                <p>
+                    We’re actively working on several internal projects.  
+                    Some are early experiments, some are deep in development,  
+                    and some are evolving into full releases.
+                </p>
+
+<div class="image-row">
+    <img src="info3.png" class="feature-img" alt="Project Image">
+    <img src="Oracle tablet placem.png" class="feature-img" alt="Oracle Tablet">
+    <img src="signal-2025-01-12-192044_023.png" class="feature-img" alt="Project Image">
+    <img src="signal-2025-01-12-192044_030.png" class="feature-img" alt="Project Image">
+</div>
+
+
+
+            </div>
+
+            <!-- ABOUT -->
+            <div class="section">
+                <h2>Who We Are</h2>
+                <p>
+                    iLL‑Logic Studios is built by creators who love solving problems,  
+                    breaking rules, and pushing ideas into reality.  
+                    We’re developers, designers, tinkerers, and thinkers —  
+                    always exploring what’s possible.
+                </p>
+            </div>
+
+            <!-- CALL TO ACTION -->
+            <div class="FAQ">
+                <h1>Stay Connected</h1>
+                <ul>
+                    <li><a href="#" target="_blank">Follow us on YouTube</a></li>
+                    <li><a href="#" target="_blank">Join our Discord</a></li>
+                    <li><a href="#" target="_blank">Check out our updates</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
 <div class="footer">
-    <div class="copy" id="txtshadow">iLL-Logic Studios &copy All Rights Reserved</div><!-- COPYRIGHT -->
-</div><!-- FOOTER -->
+    <div class="copy">iLL-Logic Studios &copy; All Rights Reserved</div>
+</div>
 
-
+<!-- MOBILE MENU SCRIPT -->
+<script>
+function toggleMenu() {
+    const nav = document.querySelector('.nav');
+    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+}
+</script>
 
 </body>
 </html>
