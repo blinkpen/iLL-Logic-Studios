@@ -5,6 +5,10 @@ const modalSubtitle = document.getElementById('modal-subtitle');
 const modalBody = document.getElementById('modal-body');
 const modalClose = document.getElementById('modal-close');
 
+/* ---------------------------------------------
+   PROJECT TITLE MAP
+   (Displayed at the top of the modal)
+--------------------------------------------- */
 const projectTitleMap = {
   'project-one': 'Project One',
   'logicpack': 'Project LogicPack',
@@ -25,9 +29,16 @@ const projectTitleMap = {
   'sanctuary': 'Project Sanctuary',
   'illlogic-site': 'iLL‑Logic Studios Website',
   'dna': 'Dynamic Nexus Archive',
-  'oracle': 'ORACLE Quantum‑Esoteric Computer'
+  'oracle': 'ORACLE Quantum‑Esoteric Computer',
+
+  /* ⭐ ADDED: AION */
+  'aion': 'Project AION'
 };
 
+/* ---------------------------------------------
+   TEMPLATE MAP
+   (Which <template> each project uses)
+--------------------------------------------- */
 const templateMap = {
   'project-one': 'tpl-project-one',
   'logicpack': 'tpl-logicpack',
@@ -48,9 +59,15 @@ const templateMap = {
   'sanctuary': 'tpl-sanctuary',
   'illlogic-site': 'tpl-illlogic-site',
   'dna': 'tpl-dna',
-  'oracle': 'tpl-oracle'
+  'oracle': 'tpl-oracle',
+
+  /* ⭐ ADDED: AION */
+  'aion': 'tpl-aion'
 };
 
+/* ---------------------------------------------
+   OPEN MODAL
+--------------------------------------------- */
 function openModal(projectKey) {
   const tplId = templateMap[projectKey];
   const tpl = document.getElementById(tplId);
@@ -71,10 +88,16 @@ function openModal(projectKey) {
   modalBackdrop.classList.add('active');
 }
 
+/* ---------------------------------------------
+   CLOSE MODAL
+--------------------------------------------- */
 function closeModal() {
   modalBackdrop.classList.remove('active');
 }
 
+/* ---------------------------------------------
+   EVENT LISTENERS
+--------------------------------------------- */
 document.querySelectorAll('.project-button').forEach(btn => {
   btn.addEventListener('click', () => {
     const key = btn.getAttribute('data-project');
