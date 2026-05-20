@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Projects</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+  /* Two-column project lists */
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  @media (max-width: 840px) {
+    .project-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <header>
+    <div class="badge">
+      <div class="badge-dot"></div>
+      Project Index
+    </div>
+    <h1>Your Projects</h1>
+    <p class="subtitle">A complete overview of your active worlds, tools, engines, apps, and metaphysical systems.</p>
+  </header>
+
+  <div class="grid">
+
+    <!-- LEFT COLUMN ONLY -->
+    <div class="panel">
+      <div class="panel-inner">
+
+        <!-- GAMES -->
+        <div class="category">
+          <div class="category-header">
+            <span class="category-name">Games & Playable Worlds</span>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Project One</span>
+                <button class="project-button" data-project="project-one"><span>✦</span> More details</button>
+              </div>
+              <p class="project-summary">A modular dungeon‑logic sandbox.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Project GravPuzz</span>
+                <button class="project-button" data-project="gravpuzz"><span>⟁</span> More details</button>
+              </div>
+              <p class="project-summary">Retro gravity‑shifting puzzle game.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Project GravityShift FPS</span>
+                <button class="project-button" data-project="gravityshift-fps"><span>⟁</span> More details</button>
+              </div>
+              <p class="project-summary">First‑person gravity puzzle world.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Project Esoterica</span>
+                <button class="project-button" data-project="esoterica"><span>⟁</span> More details</button>
+              </div>
+              <p class="project-summary">A metaphysical, reality‑shifting exploration world.</p>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- UNITY TOOLS -->
+        <div class="category">
+          <div class="category-header">
+            <span class="category-name">Unity Tools & Engine Frameworks</span>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Project ACE</span>
+                <button class="project-button" data-project="ace"><span>✦</span> More details</button>
+              </div>
+              <p class="project-summary">Agnostic card engine with full rules.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Project LogicPack</span>
+                <button class="project-button" data-project="logicpack"><span>⌬</span> More details</button>
+              </div>
+              <p class="project-summary">3D dungeon‑themed logic system.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">G.R.O.U.P.</span>
+                <button class="project-button" data-project="group-tool"><span>⚙</span> More details</button>
+              </div>
+              <p class="project-summary">Global Rotation & Unified Positioning.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Unity Pivot Tool</span>
+                <button class="project-button" data-project="pivot-tool"><span>⚙</span> More details</button>
+              </div>
+              <p class="project-summary">ProBuilder‑safe pivot editing tool.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Project Invisible</span>
+                <button class="project-button" data-project="invisible"><span>⚙</span> More details</button>
+              </div>
+              <p class="project-summary">Camera‑based culling & shadow manager.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Project CORE</span>
+                <button class="project-button" data-project="core"><span>⌬</span> More details</button>
+              </div>
+              <p class="project-summary">Unity‑integrated AI co‑developer.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">WinForms Control Theme Suite</span>
+                <button class="project-button" data-project="winforms-theme"><span>⚙</span> More details</button>
+              </div>
+              <p class="project-summary">Custom skinnable WinForms UI framework.</p>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- WEB -->
+        <div class="category">
+          <div class="category-header">
+            <span class="category-name">Web Platforms & Digital Archives</span>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">iLL‑Logic Studios Website</span>
+                <button class="project-button" data-project="illlogic-site"><span>⌬</span> More details</button>
+              </div>
+              <p class="project-summary">Your official studio presence.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Dynamic Nexus Archive</span>
+                <button class="project-button" data-project="dna"><span>⟐</span> More details</button>
+              </div>
+              <p class="project-summary">A metaphysical cosmic‑themed archive.</p>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- APPS -->
+        <div class="category">
+          <div class="category-header">
+            <span class="category-name">Apps & Utility Software</span>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">VoiceStudio</span>
+                <button class="project-button" data-project="voicestudio"><span>✦</span> More details</button>
+              </div>
+              <p class="project-summary">AI‑powered voice training & synthesis suite.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Local‑Only Password Saver</span>
+                <button class="project-button" data-project="password-saver"><span>⌬</span> More details</button>
+              </div>
+              <p class="project-summary">Encrypted offline vault with master key.</p>
+            </li>
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Project AION</span>
+                <button class="project-button" data-project="aion"><span>◉</span> More details</button>
+              </div>
+              <p class="project-summary">All‑In‑One Neural Network.</p>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- REAL WORLD -->
+        <div class="category">
+          <div class="category-header">
+            <span class="category-name">Real‑World Projects</span>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">Project Sanctuary</span>
+                <button class="project-button" data-project="sanctuary"><span>⟐</span> More details</button>
+              </div>
+              <p class="project-summary">A 10+ acre wooded spiritual retreat.</p>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- HARDWARE -->
+        <div class="category">
+          <div class="category-header">
+            <span class="category-name">Metaphysical & Experimental Hardware</span>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project">
+              <div class="project-header-row">
+                <span class="project-name">ORACLE</span>
+                <button class="project-button" data-project="oracle"><span>⟐</span> More details</button>
+              </div>
+              <p class="project-summary">Omnidirectional Resonant Analog Consciousness Engine.</p>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+<div class="panel" style="margin-top:32px;">
+  <div class="panel-inner">
+
+    <div class="panel-title">How to Add a New Project</div>
+    <div class="panel-description">
+      This site uses a simple three‑part system for adding new projects.  
+      Follow this structure and everything will automatically connect to the modal system.
+    </div>
+
+    <div class="category" style="border-top:none; padding-top:0; margin-top:0;">
+      <div class="category-header">
+        <span class="category-name">1. Add a Project Card</span>
+      </div>
+      <p class="project-summary">
+        Inside the correct category, add a new <code>&lt;li class="project"&gt;</code> block.  
+        This controls how the project appears in the list.
+      </p>
+      <pre style="font-size:0.8rem; margin-top:8px; white-space:pre-wrap;">
+&lt;li class="project"&gt;
+  &lt;div class="project-header-row"&gt;
+    &lt;span class="project-name"&gt;Project Name&lt;/span&gt;
+    &lt;button class="project-button" data-project="project-key"&gt;
+      &lt;span&gt;✦&lt;/span&gt; More details
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;p class="project-summary"&gt;Short description.&lt;/p&gt;
+&lt;/li&gt;
+      </pre>
+    </div>
+
+    <div class="category">
+      <div class="category-header">
+        <span class="category-name">2. Register the Project in JavaScript</span>
+      </div>
+      <p class="project-summary">
+        Add the project to both maps in <code>script.js</code>:  
+        <strong>projectTitleMap</strong> and <strong>templateMap</strong>.
+      </p>
+      <pre style="font-size:0.8rem; margin-top:8px; white-space:pre-wrap;">
+projectTitleMap["project-key"] = "Project Name";
+templateMap["project-key"] = "tpl-project-key";
+      </pre>
+    </div>
+
+    <div class="category">
+      <div class="category-header">
+        <span class="category-name">3. Create the Modal Template</span>
+      </div>
+      <p class="project-summary">
+        Each project has a matching <code>&lt;template&gt;</code> block.  
+        This is the content shown inside the modal.
+      </p>
+      <pre style="font-size:0.8rem; margin-top:8px; white-space:pre-wrap;">
+&lt;template id="tpl-project-key"&gt;
+  &lt;data data-glyph="✦" data-subtitle="Short subtitle"&gt;&lt;/data&gt;
+
+  &lt;p&gt;Your modal content goes here.&lt;/p&gt;
+&lt;/template&gt;
+      </pre>
+    </div>
+
+    <p class="project-summary" style="margin-top:14px;">
+      That’s it — once these three pieces are added, the modal system automatically handles
+      opening, closing, glyphs, subtitles, and layout.
+    </p>
+
+  </div>
+</div>
+
+
+
+
+
+  <p class="footer-note">Built with <span>iLL‑Logic</span> energy.</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- GLOBAL MODAL -->
+<div id="modal-backdrop" class="modal-backdrop">
+  <div class="modal">
+    <button id="modal-close" class="modal-close">✕</button>
+    <div class="modal-inner">
+      <div id="modal-glyph" class="modal-glyph"></div>
+      <div id="modal-title" class="modal-title"></div>
+      <div id="modal-subtitle" class="modal-subtitle"></div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ALL TEMPLATES GO HERE -->
+
+<!-- ========================= -->
+<!--        PROJECT ONE        -->
+<!-- ========================= -->
+<template id="tpl-project-one">
+  <data data-glyph="✦" data-subtitle="Modular dungeon‑logic sandbox"></data>
+
+  <p>
+    A flexible, modular sandbox for building dungeons, puzzles, logic systems, and interactive
+    environments. Designed as a foundation for experimentation and rapid prototyping.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--       LOGICPACK          -->
+<!-- ========================= -->
+<template id="tpl-logicpack">
+  <data data-glyph="⌬" data-subtitle="3D dungeon‑themed logic system"></data>
+
+  <p>
+    A controller‑agnostic logic framework featuring switches, plates, levers, torches, doors,
+    lights, moving platforms, and logic gates — all inheriting from a unified base class.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--           ACE             -->
+<!-- ========================= -->
+<template id="tpl-ace">
+  <data data-glyph="✦" data-subtitle="Agnostic card engine"></data>
+
+  <p>
+    A fully modular, rules‑driven card engine with zones, interactions, audio, animations,
+    and developer‑extendable logic. Designed for any card game genre.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--         GRAVPUZZ          -->
+<!-- ========================= -->
+<template id="tpl-gravpuzz">
+  <data data-glyph="⟁" data-subtitle="Retro gravity‑shifting puzzle game"></data>
+
+  <p>
+    A top‑down puzzle world where cubes inherit the player’s gravity direction. Designed for
+    tight, clever puzzle loops and retro‑inspired visuals.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--     GRAVITYSHIFT FPS      -->
+<!-- ========================= -->
+<template id="tpl-gravityshift-fps">
+  <data data-glyph="⟁" data-subtitle="First‑person gravity puzzle world"></data>
+
+  <p>
+    A first‑person puzzle world where gravity is a tool. Cubes, platforms, and traversal
+    elements all respond to the player’s current gravity orientation.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--        ESOTERICA          -->
+<!-- ========================= -->
+<template id="tpl-esoterica">
+  <data data-glyph="⟁" data-subtitle="Metaphysical, reality‑shifting exploration world"></data>
+
+  <p>
+    A surreal metaphysical world built on resonance, sigils, fate threads, and memory echoes.
+    The environment reacts to your inner state, choices, and symbolic alignment.
+  </p>
+
+  <h3>Core Systems</h3>
+  <p>
+    • Resonance System (Mind, Heart, Shadow, Light, Void)<br>
+    • Sigil Logic (Gate, Bind, Reveal, Sever, Mirror)<br>
+    • Fate Thread System (Threads, Knots, Weaves)<br>
+    • Memory Echo System (recorded actions, spectral clones)
+  </p>
+
+  <h3>World Zones</h3>
+  <p>
+    • Veilplane Hub<br>
+    • Fractured Citadel<br>
+    • Echo Gardens<br>
+    • Obsidian Archive<br>
+    • Astral Bridges<br>
+    • Null Pockets
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--        PIVOT TOOL         -->
+<!-- ========================= -->
+<template id="tpl-pivot-tool">
+  <data data-glyph="⚙" data-subtitle="ProBuilder‑safe pivot editing"></data>
+
+  <p>
+    A professional pivot editing tool with prefab‑aware workflows, ProBuilder‑safe baking,
+    and precision alignment features.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--        G.R.O.U.P.         -->
+<!-- ========================= -->
+<template id="tpl-group-tool">
+  <data data-glyph="⚙" data-subtitle="Global Rotation & Unified Positioning"></data>
+
+  <p>
+    A transform manipulation tool for precise global/local rotation, orientation, and
+    positioning workflows inside Unity.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--        INVISIBLE          -->
+<!-- ========================= -->
+<template id="tpl-invisible">
+  <data data-glyph="⚙" data-subtitle="Camera‑based culling & shadow manager"></data>
+
+  <p>
+    A dynamic camera‑aware culling system with offset controls, gizmo visualization, and a
+    shadow budget manager for performance‑critical scenes.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--           CORE            -->
+<!-- ========================= -->
+<template id="tpl-core">
+  <data data-glyph="⌬" data-subtitle="Unity‑integrated AI co‑developer"></data>
+
+  <p>
+    A Unity‑embedded AI assistant that generates scripts, components, inspectors, and logic
+    structures directly inside the editor.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--      VOICESTUDIO          -->
+<!-- ========================= -->
+<template id="tpl-voicestudio">
+  <data data-glyph="✦" data-subtitle="AI‑powered voice training & synthesis"></data>
+
+  <p>
+    A full TTS → RVC pipeline with model training, WAV generation, playback, and voice
+    personality shaping.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--     PASSWORD SAVER        -->
+<!-- ========================= -->
+<template id="tpl-password-saver">
+  <data data-glyph="⌬" data-subtitle="Encrypted offline vault"></data>
+
+  <p>
+    A secure, offline‑only password vault with master‑password encryption and zero cloud
+    dependency.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--          AION             -->
+<!-- ========================= -->
+<template id="tpl-aion">
+  <data data-glyph="◉" data-subtitle="All‑In‑One Neural Network"></data>
+
+  <p>
+    AION is a modular AI runtime where the Core is required and all advanced features are
+    separate purchasable plugins. AION acts as an operating system for AI tasks.
+  </p>
+
+  <h3>Core Layer</h3>
+  <p>
+    • Local LLM Brain<br>
+    • Router Engine<br>
+    • Plugin Loader<br>
+    • Knowledge Folder<br>
+    • Local Search<br>
+    • Basic OCR<br>
+    • PixelScope Vision (Core)<br>
+    • Chat UI
+  </p>
+
+  <h3>Plugins</h3>
+  <p>
+    • Vision Pro<br>
+    • Audio Transcription<br>
+    • RVC Voice<br>
+    • File Search Pro<br>
+    • Web Scraper<br>
+    • Automation<br>
+    • Unity Tools<br>
+    • Sanctuary Planner<br>
+    • ORACLE Simulation
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--        SANCTUARY          -->
+<!-- ========================= -->
+<template id="tpl-sanctuary">
+  <data data-glyph="⟐" data-subtitle="10+ acre wooded spiritual retreat"></data>
+
+  <p>
+    A real‑world nature sanctuary featuring gardens, walking paths, meditation spaces, and a
+    central temple structure.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--      ILL‑LOGIC SITE       -->
+<!-- ========================= -->
+<template id="tpl-illlogic-site">
+  <data data-glyph="⌬" data-subtitle="Your official studio presence"></data>
+
+  <p>
+    Your main studio website — portfolio, contact, project listings, and brand identity hub.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--           DNA             -->
+<!-- ========================= -->
+<template id="tpl-dna">
+  <data data-glyph="⟐" data-subtitle="Cosmic‑themed metaphysical archive"></data>
+
+  <p>
+    A living digital archive with cosmic metaphysical themes, dynamic entries, and evolving
+    lore structures.
+  </p>
+</template>
+
+
+<!-- ========================= -->
+<!--          ORACLE           -->
+<!-- ========================= -->
+<template id="tpl-oracle">
+  <data data-glyph="⟐" data-subtitle="Omnidirectional Resonant Analog Consciousness Engine"></data>
+
+  <p>
+    A metaphysical quantum‑esoteric hardware concept designed to interface with symbolic,
+    analog, and energetic data structures.
+  </p>
+</template>
+
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
