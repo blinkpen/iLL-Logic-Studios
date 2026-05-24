@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    background: radial-gradient(circle at 20% 20%, #1a1a2e, #0f0f17 70%);
+    font-family: "Inter", sans-serif;
+    color: #e8e8ff;
+}
+
+#app {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: 3px;
+    color: #a78bfa;
+    text-shadow: 0 0 20px #6d28d9;
+}
+
+#composer {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(167,139,250,0.2);
+    margin-bottom: 30px;
+}
+
+#composer input,
+#composer textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+}
+
+.file-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+#add-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #6d28d9, #4c1d95);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px #6d28d9;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(167,139,250,0.15);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-header img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 22px;
+    color: #c4b5fd;
+}
+
+.card-body {
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+.card-body img {
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+.delete-btn {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    color: #f87171;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 23, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(167,139,250,0.3);
+    text-align: center;
+    width: 300px;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #6d28d9, #4c1d95);
+    color: white;
+    transition: 0.2s;
+}
+
+.modal-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px #6d28d9;
+}
+
+#tag-selector p {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+#tag-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-select-badge {
+    padding: 8px 14px;
+    border-radius: 14px;
+    background: #1f2937;
+    color: #e5e7eb;
+    cursor: pointer;
+    border: 2px solid #374151;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.tag-select-badge:hover {
+    background: #374151;
+}
+
+.tag-select-badge.selected {
+    background: #10b981;
+    border-color: #059669;
+    color: white;
+    box-shadow: 0 0 10px rgba(16,185,129,0.6);
+}
+
+.tag-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag-badge {
+    padding: 6px 12px;
+    border-radius: 12px;
+    background: #4b5563;
+    color: white;
+    font-size: 12px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+#add-btn {
+    margin-top: 14px;
+}
+
+/* Base badge style */
+.tag-select-badge {
+    padding: 8px 14px;
+    border-radius: 14px;
+    background: #1f2937;
+    color: #e5e7eb;
+    cursor: pointer;
+    border: 2px solid #374151;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.tag-select-badge:hover {
+    background: #374151;
+}
+
+/* Selected state gets overridden by JS with inline color */
+.tag-select-badge.selected {
+    color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.25);
+}

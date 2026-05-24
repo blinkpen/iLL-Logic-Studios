@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mystic Feed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+    <h1 class="title">Mystic Project Feed</h1>
+
+    <!-- Tag filter -->
+    <div id="controls">
+        <label for="filter-tags">Filter by tag:</label>
+        <select id="filter-tags">
+            <option value="">All</option>
+            <option value="Concepts">Concepts</option>
+            <option value="Video Games">Video Games</option>
+            <option value="Unity Tools">Unity Tools</option>
+            <option value="Websites">Websites</option>
+            <option value="Movies">Movies</option>
+            <option value="TV Shows">TV Shows</option>
+            <option value="Books">Books</option>
+            <option value="Desktop Apps">Desktop Apps</option>
+            <option value="Mobile Apps">Mobile Apps</option>
+            <option value="Web Apps">Web Apps</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <!-- New Entry Composer -->
+    <div id="composer">
+        <input id="new-title" type="text" placeholder="Project title">
+
+        <textarea id="new-body" placeholder="Project description (HTML allowed)"></textarea>
+
+        <label class="file-label">
+            Icon Image (required)
+            <input id="new-icon" type="file" accept="image/*">
+        </label>
+
+        <label class="file-label">
+            Body Image (optional)
+            <input id="new-image" type="file" accept="image/*">
+        </label>
+
+        <div id="tag-selector">
+            <p>Select Tags:</p>
+            <div id="tag-badges"></div>
+        </div>
+
+        <button id="add-btn">Add Entry</button>
+    </div>
+
+    <div id="feed"></div>
+
+</div>
+
+<!-- Delete confirmation modal -->
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <p>Are you sure you want to delete this entry?</p>
+        <div class="modal-buttons">
+            <button id="modal-yes">Delete</button>
+            <button id="modal-no">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
